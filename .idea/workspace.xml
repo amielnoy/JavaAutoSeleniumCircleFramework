@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8322ee3-b087-4116-a718-a3f2e07013d2" name="Changes" comment="assertion">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+    <list default="true" id="c8322ee3-b087-4116-a718-a3f2e07013d2" name="Changes" comment="BasePage">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Config/BrowserManagment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Test1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="untitled [test]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+    <configuration name="untitled [test,-Dbrowser=ch]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -64,6 +65,7 @@
             <option name="goals">
               <list>
                 <option value="test" />
+                <option value="-Dbrowser=ch" />
               </list>
             </option>
             <option name="pomFileName" />
@@ -108,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697550177258</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="BasePage">
+      <created>1697569304380</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697569304380</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +136,7 @@
     <MESSAGE value="testng fix" />
     <MESSAGE value="pom changes" />
     <MESSAGE value="assertion" />
-    <option name="LAST_COMMIT_MESSAGE" value="assertion" />
+    <MESSAGE value="BasePage" />
+    <option name="LAST_COMMIT_MESSAGE" value="BasePage" />
   </component>
 </project>
