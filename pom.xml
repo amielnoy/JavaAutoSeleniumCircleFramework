@@ -25,20 +25,21 @@
 
   <dependencies>
 
-
-
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>6.8.21</version>
       <scope>provided</scope>
     </dependency>
-
     <dependency>
-      <groupId>com.github.jsdevel</groupId>
-      <artifactId>testng-selenium</artifactId>
-      <version>0.10.0</version>
-      <scope>test</scope>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>3.141.59</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.0.3</version>
     </dependency>
   </dependencies>
 
@@ -52,9 +53,6 @@
           <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
           </suiteXmlFiles>
-          <systemProperties>
-            <testng.selenium.endpoint>${testng.selenium.endpoint}</testng.selenium.endpoint>
-          </systemProperties>
         </configuration>
       </plugin>
     </plugins>

@@ -4,8 +4,8 @@
        thread-count="3"
        parallel="methods">
   <test name="AllSuites">
-    <packages>
-      <package name=".*"/>
-    </packages>
+    <classes>
+      <class name="tests.Test1"></class>
+    </classes>
   </test>
 </suite>
