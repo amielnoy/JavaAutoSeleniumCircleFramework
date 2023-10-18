@@ -10,16 +10,6 @@ public class BaseTest {
     String env="";
     @BeforeSuite
     public void SetupEnvironmentAndBrowser(){
-        browser=System.getProperty("browser","ch");
-        env=System.getProperty("env","test");
-        if(browser.equalsIgnoreCase("ch"))
-        {
-            WebDriverManager.chromedriver().setup();
-        }
-        if(browser.equalsIgnoreCase("ff"))
-        {
-            WebDriverManager.chromedriver().setup();
-        }
 
 
     }
