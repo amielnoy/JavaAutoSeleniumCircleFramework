@@ -5,7 +5,7 @@
        parallel="methods">
   <test name="AllSuites">
     <classes>
-      <class name="tests.Test1"></class>
+      <class name="tests.Login1Test"></class>
     </classes>
   </test>
 </suite>

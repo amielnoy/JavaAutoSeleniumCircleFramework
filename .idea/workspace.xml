@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8322ee3-b087-4116-a718-a3f2e07013d2" name="Changes" comment="driver setup">
+    <list default="true" id="c8322ee3-b087-4116-a718-a3f2e07013d2" name="Changes" comment="driver setup before and after test multi thread">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/Login1Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Config/BrowserManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Config/BrowserManagment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Test1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +60,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="untitled [test,-Dbrowser=ch]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+    <configuration name="untitled [test,-Dbrowser=ff,-Denv=test]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -64,7 +72,8 @@
             <option name="goals">
               <list>
                 <option value="test" />
-                <option value="-Dbrowser=ch" />
+                <option value="-Dbrowser=ff" />
+                <option value="-Denv=test" />
               </list>
             </option>
             <option name="pomFileName" />
@@ -151,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697622282371</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="driver setup before and after test multi thread">
+      <created>1697920305055</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697920305055</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +190,7 @@
     <MESSAGE value="BrowserManagment" />
     <MESSAGE value="env seup" />
     <MESSAGE value="driver setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="driver setup" />
+    <MESSAGE value="driver setup before and after test multi thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="driver setup before and after test multi thread" />
   </component>
 </project>

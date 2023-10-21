@@ -9,26 +9,25 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
-    protected static ThreadLocal<WebDriver> ThreadLocalDriver=new ThreadLocal<>();
+    protected WebDriver driver;
+
     String browser="";
     String env="";
     @BeforeTest
     public void SetupEnvironmentAndBrowser(){
        String Env=System.getProperty("env","test");
-       WebDriver driver= BrowserManagment.SetDrover();
-       ThreadLocalDriver.set(driver);
+       driver= BrowserManagment.SetDriver();
        String SiteUrl=ConfigurationManager.GetInstance(Env).GetProperty("url");
        driver.get(SiteUrl);
     }
 
-    public static WebDriver getDriver(){
-        return ThreadLocalDriver.get();
+    public  WebDriver GetDriver(){
+        return driver;
     }
     @AfterTest
     public void TearDown()
     {
-        getDriver().quit();
-        ThreadLocalDriver.remove();
+        driver.quit();
     }
 
 

@@ -8,9 +8,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class BrowserManagment {
-    static WebDriver  driver;
+    static WebDriver driver;
 
-    public static WebDriver SetDrover() {
+    public static WebDriver SetDriver() {
         String browser = System.getProperty("browser", "ch");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
@@ -18,23 +18,23 @@ public class BrowserManagment {
         firefoxOptions.addArguments("--headless");
 
         if (browser.equalsIgnoreCase("ch")) {
-            WebDriverManager.chromedriver().setup();
-            if(System.getProperty("os.name").toLowerCase().equals("linux")){
-                driver=new ChromeDriver(chromeOptions);
-            }
-            else {
-                driver=new ChromeDriver();
+            WebDriverManager.chromedriver().avoidBrowserDetection().setup();
+            if (System.getProperty("os.name").toLowerCase().equals("linux")) {
+                driver = new ChromeDriver(chromeOptions);
+            } else {
+                driver = new ChromeDriver();
             }
         }
         if (browser.equalsIgnoreCase("ff")) {
             WebDriverManager.firefoxdriver().setup();
-            if(System.getProperty("os.name").toLowerCase().equals("linux")){
-                driver=new FirefoxDriver(firefoxOptions);
-            }
-            else {
-                driver=new FirefoxDriver();
+            if (System.getProperty("os.name").toLowerCase().equals("linux")) {
+                driver = new FirefoxDriver(firefoxOptions);
+            } else {
+                driver = new FirefoxDriver();
             }
         }
-    return driver;
+        driver.manage().window().fullscreen();
+        return driver;
     }
+
 }
