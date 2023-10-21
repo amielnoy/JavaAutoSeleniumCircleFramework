@@ -20,13 +20,13 @@ public class BasePage {
         this.wait=new WebDriverWait(driver,30);
     }
 
-    public void IsElementDisplaaied(By by)
+    public void IsElementDisplaied(By by)
     {
         WebElement element=driver.findElement(by);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void IsElementDisplaaiedWithTextIn(By by,String Text)
+    public void IsElementDisplaiedWithTextIn(By by,String Text)
     {
         WebElement element=driver.findElement(by);
         wait.until(ExpectedConditions.textToBePresentInElement(element,Text));
