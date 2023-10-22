@@ -3,11 +3,11 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class GoogleTest1 extends BasePage {
-    @FindBy(className = "login")
-    WebElement linkLogin;
+public class GoogleMainPage extends BasePage {
+
+    @FindBy
+    private WebElement By SEARCH_BOX = By.name("q");
 
     @FindBy(id = "email")
     WebElement txtEmail;
@@ -27,10 +27,8 @@ public class GoogleTest1 extends BasePage {
     @FindBy(xpath = "//li[contains(text(),'Authentication failed.')]")
     WebElement lblInvalidPassword;
 
-    public GoogleTest1(WebDriver driver) {
+    public GoogleMainPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
-
     }
 
     //valid email and valid password

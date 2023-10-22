@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8322ee3-b087-4116-a718-a3f2e07013d2" name="Changes" comment="driver setup before and after test multi thread">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/Login1Test.java" afterDir="false" />
+    <list default="true" id="c8322ee3-b087-4116-a718-a3f2e07013d2" name="Changes" comment="infra test base driver pom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Config/BrowserManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Config/BrowserManagment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Test1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/GoogleTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/GoogleMainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Login1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Login1Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697920305055</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="infra test base driver pom">
+      <created>1697923554463</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697923554463</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +193,7 @@
     <MESSAGE value="env seup" />
     <MESSAGE value="driver setup" />
     <MESSAGE value="driver setup before and after test multi thread" />
-    <option name="LAST_COMMIT_MESSAGE" value="driver setup before and after test multi thread" />
+    <MESSAGE value="infra test base driver pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="infra test base driver pom" />
   </component>
 </project>
