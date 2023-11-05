@@ -33,7 +33,7 @@ public class BrowserManagment {
                 driver = new FirefoxDriver();
             }
         }
-        driver.manage().window().fullscreen();
+        //driver.manage().window().max();
         return driver;
     }
 

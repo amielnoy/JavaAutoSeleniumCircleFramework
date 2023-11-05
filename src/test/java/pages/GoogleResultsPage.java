@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,16 +9,20 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class GoogleResultsPage extends BasePage {
-    @FindBy(css = "div.g")
-    private List<WebElement> searchResults;
 
+
+    @FindBy(className = "logo")
+    private WebElement Logo;
+
+    @FindBy(css = "div.notranslate")
+    private List<WebElement> searchResults;
     @FindBy(css = "h3.LC20lb")
     private List<WebElement> resultTitles;
 
-    @FindBy(css = "div.VwiC3b > div > span")
+    @FindBy(css = "div.VwiC3b")
     private List<WebElement> resultDescriptions;
 
-    @FindBy(css = "cite.iUh30")
+    @FindBy(css = "cite.qLRx3b")
     private List<WebElement> resultUrls;
 
     public List<String> getResultTitles() {
@@ -33,10 +36,13 @@ public class GoogleResultsPage extends BasePage {
     }
     public GoogleResultsPage(WebDriver driver) {
         super(driver);
-        IsElementDisplaied(new By.ByCssSelector("div.VwiC3b > div > span"));
+        for (String title:getResultTitles()) {
+            System.out.println(title);
+        }
+        IsElementDisplayed(Logo);
     }
 
     public void CompareSearchResultTitle(String text){
-        Assert.assertEquals(getResultTitles().contains(text),true," results not contain "+ text);
+        Assert.assertTrue(getResultTitles().contains(text)," results not contain "+ text);
     }
 }

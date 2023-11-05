@@ -1,16 +1,9 @@
 package pages;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.ITestResult;
-
-import java.io.File;
-import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class BasePage {
 
@@ -24,15 +17,13 @@ public class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void IsElementDisplaied(By by)
+    public void IsElementDisplayed(WebElement element)
     {
-        WebElement element=driver.findElement(by);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void IsElementDisplaiedWithTextIn(By by,String Text)
+    public void IsElementDisplayedWithTextIn(WebElement element, String Text)
     {
-        WebElement element=driver.findElement(by);
         wait.until(ExpectedConditions.textToBePresentInElement(element,Text));
     }
 

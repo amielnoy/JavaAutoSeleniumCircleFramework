@@ -20,7 +20,7 @@ public class BaseTest {
 
     String browser="";
     String env="";
-    @BeforeMethod
+    @BeforeTest
     public void SetupEnvironmentAndBrowser(){
        String Env=System.getProperty("env","test");
        driver= BrowserManagment.SetDriver();
@@ -28,21 +28,9 @@ public class BaseTest {
        driver.get(SiteUrl);
     }
 
-    public void CaptureErrorPage(ITestResult result) throws IOException {
-        String testName = result.getName();
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
-        LocalDateTime now = LocalDateTime.now();
-        String datetime = dtf.format(now);
-        File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        String fileName = testName + "_" + datetime + ".png";
-        FileUtils.copyFile(screenshot, new File("/src/test/screenshots/" + fileName));
-    }
-    @AfterMethod
-    public void TearDown(ITestResult result) throws IOException {
-        if (result.getStatus()==2)
-        {
-            CaptureErrorPage(result);
-        }
+
+    @AfterTest
+    public void TearDown() throws IOException {
         driver.quit();
     }
 
