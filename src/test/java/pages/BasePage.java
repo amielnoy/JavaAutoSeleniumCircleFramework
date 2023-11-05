@@ -1,11 +1,16 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class BasePage {
 
@@ -30,6 +35,8 @@ public class BasePage {
         WebElement element=driver.findElement(by);
         wait.until(ExpectedConditions.textToBePresentInElement(element,Text));
     }
+
+
 
 
 }
