@@ -4,50 +4,28 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class GoogleMainPage extends BasePage {
 
-    @FindBy
-    private WebElement By SEARCH_BOX = By.name("q");
-
-    @FindBy(id = "email")
-    WebElement txtEmail;
-
-    @FindBy(id = "passwd")
-    WebElement txtPassword;
-
-    @FindBy(id = "SubmitLogin")
-    WebElement btnSignIn;
-
-    @FindBy(xpath = "//span[contains(text(),'viva test')]")
-    WebElement lblUserName;
-
-    @FindBy(xpath = "//li[contains(text(),'Invalid email address.')]")
-    WebElement lblInvalidEmail;
-
-    @FindBy(xpath = "//li[contains(text(),'Authentication failed.')]")
-    WebElement lblInvalidPassword;
+    @FindBy(name= "q")
+    private WebElement SearchBox;
+    @FindBy(css = "ul.sbct li span")
+    private List<WebElement> suggestionsList;
 
     public GoogleMainPage(WebDriver driver) {
         super(driver);
     }
-
-    //valid email and valid password
-    public String doLogin(String email, String password) {
-        linkLogin.click();
-        txtEmail.sendKeys(email);
-        txtPassword.sendKeys(password);
-        btnSignIn.click();
-
-        return lblUserName.getText();
+    public void enterText(String text){
+        SearchBox.sendKeys(text);
     }
 
-    //Invalid email
-    public String loginWithInvalidPassword(String email, String password) {
-        linkLogin.click();
-        txtEmail.sendKeys(email);
-        txtPassword.sendKeys(password);
-        btnSignIn.click();
-
-        return lblInvalidPassword.getText();
+    public GoogleResultsPage SubmitSearch(){
+        SearchBox.submit();
+        return new GoogleResultsPage(driver);
     }
+
+
+
+
 }
