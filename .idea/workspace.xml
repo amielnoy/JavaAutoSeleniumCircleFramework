@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8322ee3-b087-4116-a718-a3f2e07013d2" name="Changes" comment="allure report">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/GoogleResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/GoogleResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestCases/test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestCases/test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestCases/test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestCases/test2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestCases/testng.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Config/BrowserManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Config/BrowserManagment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +109,7 @@
               <list>
                 <option value="clean" />
                 <option value="test" />
-                <option value="-Dbrowser=ff" />
+                <option value="-Dbrowser=ch" />
                 <option value="-Denv=test" />
               </list>
             </option>
@@ -309,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699286848505</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="allure report">
+      <created>1699307411533</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1699307411533</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

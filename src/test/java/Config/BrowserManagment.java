@@ -18,7 +18,7 @@ public class BrowserManagment {
         firefoxOptions.addArguments("--headless");
 
         if (browser.equalsIgnoreCase("ch")) {
-            WebDriverManager.chromedriver().avoidBrowserDetection().setup();
+            WebDriverManager.chromedriver().setup();
             if (System.getProperty("os.name").toLowerCase().equals("linux")) {
                 driver = new ChromeDriver(chromeOptions);
             } else {
@@ -26,7 +26,7 @@ public class BrowserManagment {
             }
         }
         if (browser.equalsIgnoreCase("ff")) {
-            WebDriverManager.firefoxdriver().setup();
+            WebDriverManager.firefoxdriver().create();
             if (System.getProperty("os.name").toLowerCase().equals("linux")) {
                 driver = new FirefoxDriver(firefoxOptions);
             } else {
