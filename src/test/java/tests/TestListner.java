@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
 import java.io.IOException;
 
@@ -29,7 +30,10 @@ public class TestListner implements ITestListener {
         Object testClass = iTestResult.getInstance();
         WebDriver webDriver = ((BaseTest) testClass).driver;
         try {
-            utils.utils.CaptureErrorPage(iTestResult.getTestName(),webDriver );
+            String ScreenShotPath=utils.utils.CaptureErrorPage(iTestResult.getTestName(),webDriver );
+            String path = "<img src=\"file://" + ScreenShotPath + "\" alt=\"\"/>";
+            Reporter.log(path);
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

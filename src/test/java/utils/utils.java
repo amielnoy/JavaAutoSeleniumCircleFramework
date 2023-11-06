@@ -13,12 +13,15 @@ import java.time.format.DateTimeFormatter;
 
 public class utils {
 
-    public static void CaptureErrorPage(String testName, WebDriver driver) throws IOException {
+    public static String CaptureErrorPage(String testName, WebDriver driver) throws IOException {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
         LocalDateTime now = LocalDateTime.now();
         String datetime = dtf.format(now);
         File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         String fileName = testName + "_" + datetime + ".png";
-        FileUtils.copyFile(screenshot, new File("src/test/screenshots/" + fileName));
+        File ScreenShotPath=new File("src/test/screenshots/" + fileName);
+        FileUtils.copyFile(screenshot,ScreenShotPath );
+        return ScreenShotPath.getAbsolutePath();
+
     }
 }
