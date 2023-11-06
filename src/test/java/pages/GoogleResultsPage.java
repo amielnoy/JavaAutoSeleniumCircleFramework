@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,12 +37,10 @@ public class GoogleResultsPage extends BasePage {
     }
     public GoogleResultsPage(WebDriver driver) {
         super(driver);
-        for (String title:getResultTitles()) {
-            System.out.println(title);
-        }
         IsElementDisplayed(Logo);
     }
 
+    @Step("Check that the term we searched is shown in the search results")
     public void CompareSearchResultTitle(String text){
         Assert.assertTrue(getResultTitles().contains(text)," results not contain "+ text);
     }

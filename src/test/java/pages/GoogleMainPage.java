@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,13 +19,15 @@ public class GoogleMainPage extends BasePage {
     public GoogleMainPage(WebDriver driver) {
         super(driver);
     }
+
+    @Step("Entering search term")
     public void enterText(String text)  {
         for (char ch:text.toCharArray()) {
             SearchBox.sendKeys(String.valueOf(ch));
         }
 
     }
-
+    @Step("Submit Search")
     public GoogleResultsPage SubmitSearch(){
         SearchBox.submit();
         return new GoogleResultsPage(driver);

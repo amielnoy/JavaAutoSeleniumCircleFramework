@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c8322ee3-b087-4116-a718-a3f2e07013d2" name="Changes" comment="continue testng reporter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/GoogleMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/GoogleMainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/GoogleResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/GoogleResultsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/GoogleSearchTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/GoogleSearchTest1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestListner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestListner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -53,6 +62,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projects\JavaUIAutomationFramework\untitled\src\test\java\Config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\JavaUIAutomationFramework\untitled" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -208,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699229443165</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="continue testng reporter">
+      <created>1699256469146</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1699256469146</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +263,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/tests/TestListner.java</url>
-          <line>29</line>
+          <line>37</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
