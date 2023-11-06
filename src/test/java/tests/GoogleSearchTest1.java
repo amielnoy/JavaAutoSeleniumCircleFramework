@@ -9,7 +9,7 @@ import pages.GoogleResultsPage;
 @Listeners(TestListner.class)
 public class GoogleSearchTest1 extends BaseTest {
 
-    @Test
+    @Test(description = "Failed 123 Test")
     public void SearchForSelenium() throws InterruptedException {
         GoogleMainPage GoogleMainPage= new  GoogleMainPage(driver);
         GoogleMainPage.enterText("123");

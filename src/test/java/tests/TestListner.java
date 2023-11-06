@@ -31,8 +31,7 @@ public class TestListner implements ITestListener {
         WebDriver webDriver = ((BaseTest) testClass).driver;
         try {
             String ScreenShotPath=utils.utils.CaptureErrorPage(iTestResult.getTestName(),webDriver );
-            String path = "<img src=\"file://" + ScreenShotPath + "\" alt=\"\"/>";
-            Reporter.log(path);
+            Reporter.log("<br /><h2>"+iTestResult.getMethod().getDescription()+"</h2><br/><img src='"+ScreenShotPath+"'  /><br>");
 
         } catch (IOException e) {
             throw new RuntimeException(e);
