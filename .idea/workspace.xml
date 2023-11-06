@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8322ee3-b087-4116-a718-a3f2e07013d2" name="Changes" comment="continue testng reporter">
+    <list default="true" id="c8322ee3-b087-4116-a718-a3f2e07013d2" name="Changes" comment="allure report">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestCases/test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestCases/testng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/GoogleMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/GoogleMainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/GoogleResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/GoogleResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/GoogleSearchTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/GoogleSearchTest1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestListner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestListner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/GoogleSearchTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestCases/test2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,14 +65,18 @@
       <recent name="C:\Projects\JavaUIAutomationFramework\untitled\src\test\java\Config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\JavaUIAutomationFramework\untitled\src\test\java\tests\TestCases" />
       <recent name="C:\Projects\JavaUIAutomationFramework\untitled" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tests" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="untitled [test,-Dbrowser=ff,-Denv=test]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+  <component name="RunManager" selected="Maven.Java-UI-FrameWork [clean,test...]">
+    <configuration name="Java-UI-FrameWork [clean:clean]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -82,6 +87,32 @@
             </option>
             <option name="goals">
               <list>
+                <option value="clean:clean" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Java-UI-FrameWork [clean,test...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
                 <option value="test" />
                 <option value="-Dbrowser=ff" />
                 <option value="-Denv=test" />
@@ -98,6 +129,43 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="test2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.TestCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestCases.test2" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.Java-UI-FrameWork [clean,test...]" />
+      <item itemvalue="Maven.Java-UI-FrameWork [clean:clean]" />
+      <item itemvalue="TestNG.test2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.test2" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -227,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699256469146</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="allure report">
+      <created>1699282663973</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1699282663973</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,7 +331,8 @@
     <MESSAGE value="added capture" />
     <MESSAGE value="screenshot fixed" />
     <MESSAGE value="continue testng reporter" />
-    <option name="LAST_COMMIT_MESSAGE" value="continue testng reporter" />
+    <MESSAGE value="allure report" />
+    <option name="LAST_COMMIT_MESSAGE" value="allure report" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
