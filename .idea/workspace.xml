@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8322ee3-b087-4116-a718-a3f2e07013d2" name="Changes" comment="allure report">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestCases/test1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestCases/testng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/GoogleResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/GoogleResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/GoogleSearchTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestCases/test2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestCases/test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestCases/test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestCases/test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestCases/test2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestCases/testng.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +64,7 @@
       <recent name="C:\Projects\JavaUIAutomationFramework\untitled\src\test\java\Config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\JavaUIAutomationFramework\untitled\src\test\resources" />
       <recent name="C:\Projects\JavaUIAutomationFramework\untitled\src\test\java\tests\TestCases" />
       <recent name="C:\Projects\JavaUIAutomationFramework\untitled" />
     </key>
@@ -302,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699282663973</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="allure report">
+      <created>1699286848505</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1699286848505</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

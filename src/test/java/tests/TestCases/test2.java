@@ -16,10 +16,10 @@ import tests.TestListner;
 public class test2 extends BaseTest {
 
     @Test
-    @Description("does text found in results")
+    @Description("does Selenium found in results")
     public void SearchForSelenium() throws InterruptedException {
         GoogleMainPage GoogleMainPage= new  GoogleMainPage(driver);
-        GoogleMainPage.enterText("selenium");
+        GoogleMainPage.enterText("Selenium");
         GoogleResultsPage GoogleResultsPage = GoogleMainPage.SubmitSearch();
         GoogleResultsPage.CompareSearchResultTitle("Selenium");
     }
