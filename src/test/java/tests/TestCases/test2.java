@@ -8,11 +8,10 @@ import org.testng.annotations.Test;
 import pages.GoogleMainPage;
 import pages.GoogleResultsPage;
 import tests.BaseTest;
-import tests.TestListner;
 
 @Epic("Google regressions")
 @Feature("Search Testing")
-@Listeners(TestListner.class)
+@Listeners(TestListener.class)
 public class test2 extends BaseTest {
 
     @Test
