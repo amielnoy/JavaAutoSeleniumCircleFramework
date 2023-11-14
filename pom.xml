@@ -8,13 +8,6 @@
   <name>Java UI FrameWork</name>
   <description>Java UI FrameWork</description>
 
-  <developers>
-    <developer>
-      <name>me</name>
-      <email>me@my.me</email>
-    </developer>
-  </developers>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <aspectj.version>1.9.6</aspectj.version>

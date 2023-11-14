@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class BrowserManagment {
-    static WebDriver driver;
+    static ThreadLocal<WebDriver> driver=new ThreadLocal<>();
 
     public static WebDriver SetDriver() {
         String browser = System.getProperty("browser", "ch");
@@ -20,21 +20,21 @@ public class BrowserManagment {
         if (browser.equalsIgnoreCase("ch")) {
             WebDriverManager.chromedriver().setup();
             if (System.getProperty("os.name").toLowerCase().equals("linux")) {
-                driver = new ChromeDriver(chromeOptions);
+                driver.set(new ChromeDriver(chromeOptions));
             } else {
-                driver = new ChromeDriver();
+                driver.set(new ChromeDriver());
             }
         }
         if (browser.equalsIgnoreCase("ff")) {
             WebDriverManager.firefoxdriver().create();
             if (System.getProperty("os.name").toLowerCase().equals("linux")) {
-                driver = new FirefoxDriver(firefoxOptions);
+                driver.set(new FirefoxDriver(firefoxOptions));
             } else {
-                driver = new FirefoxDriver();
+                driver.set(new FirefoxDriver());
             }
         }
         //driver.manage().window().max();
-        return driver;
+        return driver.get();
     }
 
 }

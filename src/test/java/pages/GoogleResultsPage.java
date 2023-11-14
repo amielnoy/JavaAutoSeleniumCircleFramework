@@ -42,7 +42,6 @@ public class GoogleResultsPage extends BasePage {
 
     @Step("Check that the term we searched is shown in the search results")
     public void CompareSearchResultTitle(String text){
-        //Assert.assertTrue(getResultTitles().contains(text)," results not contain "+ text);
-        Assert.fail(" results not contain "+ text);
-    }
+        Assert.assertTrue(getResultTitles().contains(text)," results not contain "+ text);
+   }
 }
