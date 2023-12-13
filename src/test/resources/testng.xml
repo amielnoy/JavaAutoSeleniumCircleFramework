@@ -6,7 +6,7 @@
 >
   <test name="Test Google 1">
      <classes>
-      <class name="tests.TestCases.test1"/>
+      <class name="tests.TestCases.YogetaLogin"/>
     </classes>
   </test> <!-- Test -->
 
