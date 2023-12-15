@@ -6,13 +6,8 @@
 >
   <test name="Test Google 1">
      <classes>
-      <class name="tests.TestCases.YogetaLogin"/>
+      <class name="tests.TestCases.test1"/>
     </classes>
   </test> <!-- Test -->
 
-  <test name="Test Google 2">
-    <classes>
-      <class name="tests.TestCases.test2"/>
-    </classes>
-  </test> <!-- Test -->
 </suite> <!-- Suite -->
