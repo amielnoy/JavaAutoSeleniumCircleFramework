@@ -26,7 +26,8 @@ public class BaseTest {
     public void SetupEnvironmentAndBrowser(){
        String Env=System.getProperty("env","test");
        driver= BrowserManagment.SetDriver();
-       String SiteUrl=ConfigurationManager.GetInstance(Env).GetProperty("url");
+       //String SiteUrl=ConfigurationManager.GetInstance(Env).GetProperty("url");
+       String SiteUrl="https://www.google.com";
        driver.get(SiteUrl);
     }
 
