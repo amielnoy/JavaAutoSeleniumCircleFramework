@@ -11,43 +11,47 @@ import tests.BaseTest;
 
 import java.io.ByteArrayInputStream;
 
-
 public class TestListener implements ITestListener {
-    @Override
-    public void onTestStart(ITestResult iTestResult) {
 
+    @Override
+    public void onTestStart(ITestResult result) {
+        // You can add any setup logic here if needed
     }
 
     @Override
-    public void onTestSuccess(ITestResult iTestResult) {
-
+    public void onTestSuccess(ITestResult result) {
+        // You can add logic for successful tests here if needed
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
         Object testClass = result.getInstance();
-        WebDriver driver = ((BaseTest) testClass).GetDriver();
-        Allure.addAttachment(result.getName(), new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
-
+        WebDriver driver = ((BaseTest) testClass).setupEnvironmentAndBrowser("CHROME","test");
+        if (driver instanceof TakesScreenshot) {
+            Allure.addAttachment(
+                    result.getName() + "_screenshot",
+                    new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES))
+            );
+        }
     }
 
     @Override
-    public void onTestSkipped(ITestResult iTestResult) {
-
+    public void onTestSkipped(ITestResult result) {
+        // You can add logic for skipped tests here if needed
     }
 
     @Override
-    public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-
+    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+        // This method is rarely used, but you can add logic here if needed
     }
 
     @Override
-    public void onStart(ITestContext iTestContext) {
-
+    public void onStart(ITestContext context) {
+        // You can add setup logic for the entire test run here if needed
     }
 
     @Override
-    public void onFinish(ITestContext iTestContext) {
-
+    public void onFinish(ITestContext context) {
+        // You can add teardown logic for the entire test run here if needed
     }
 }
