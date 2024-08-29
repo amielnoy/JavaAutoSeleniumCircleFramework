@@ -12,15 +12,13 @@ import tests.BaseTest;
 @Epic("Google regressions")
 @Feature("Search Testing")
 @Listeners(TestListener.class)
-public class test1 extends BaseTest {
-
+public class TestGoogleResultsUsingSearch extends BaseTest {
     @Test
-    @Description("does 123 found in results")
-    public void SearchFor123() throws InterruptedException {
-        GoogleMainPage GoogleMainPage= new  GoogleMainPage(driver);
-        GoogleMainPage.enterText("123");
+    @Description("does Selenium found in results")
+    public void SearchForSelenium() throws InterruptedException {
+        GoogleMainPage GoogleMainPage= new  GoogleMainPage(getDriver());
+        GoogleMainPage.enterText("Selenium");
         GoogleResultsPage GoogleResultsPage = GoogleMainPage.SubmitSearch();
         GoogleResultsPage.CompareSearchResultTitle("Selenium");
     }
-
 }

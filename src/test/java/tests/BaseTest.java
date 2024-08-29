@@ -3,33 +3,31 @@ package tests;
 import Config.BrowserManagment;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import java.io.IOException;
 
 public class BaseTest {
-    protected WebDriver driver;
+    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    String browser="";
-    String env="";
-    @BeforeTest
-    public void SetupEnvironmentAndBrowser(){
-       String Env=System.getProperty("env","test");
-       driver= BrowserManagment.SetDriver();
-       //String SiteUrl=ConfigurationManager.GetInstance(Env).GetProperty("url");
-       String SiteUrl="https://www.google.com";
-       driver.get(SiteUrl);
+    @Parameters({"browser", "env"})
+    @BeforeMethod
+    public WebDriver setupEnvironmentAndBrowser(@Optional("chrome") String browser, @Optional("test") String env) {
+        WebDriver webDriver = BrowserManagment.SetDriver("CHROME");
+        driver.set(webDriver);
+
+        String siteUrl = Config.ConfigurationManager.GetInstance(env).GetProperty("url");
+        getDriver().get(siteUrl);
+        return webDriver;
     }
 
-
-    public WebDriver GetDriver(){return driver;}
-    @AfterTest
-    public void TearDown() throws IOException {
-              driver.quit();
+    protected WebDriver getDriver() {
+        return driver.get();
     }
 
-
-
-
-
-
-
+    @AfterMethod
+    public void tearDown() {
+        WebDriver webDriver = getDriver();
+        if (webDriver != null) {
+            webDriver.quit();
+            driver.remove();
+        }
+    }
 }
