@@ -4,15 +4,17 @@ package Config;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Properties;
 
  public class ConfigurationManager {
      private static ConfigurationManager ConfigurationManagerInstance=null;
-    private  Properties prop = new Properties();
+    private final Properties prop = new Properties();
     private  ConfigurationManager(String env) {
         try
         {
-            InputStream props=new FileInputStream("src/test/resources/"+env+".properties");
+            InputStream props= Files.newInputStream(Paths.get("src/test/resources/" + env + ".properties"));
             prop.load(props);
         }
         catch (IOException ex)
