@@ -10,14 +10,13 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 public class BrowserManagment {
     static ThreadLocal<WebDriver> driver=new ThreadLocal<>();
 
-    public static WebDriver SetDriver() {
-        String browser = System.getProperty("browser", "ch");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.addArguments("--headless");
+    public static WebDriver SetDriver(String browser) {
+        ChromeOptions chromeOptions = null;
+        FirefoxOptions firefoxOptions = null;
 
-        if (browser.equalsIgnoreCase("ch")) {
+        if(browser == "CHROME") {
+            chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--headless");
             WebDriverManager.chromedriver().setup();
             if (System.getProperty("os.name").toLowerCase().equals("linux")) {
                 driver.set(new ChromeDriver(chromeOptions));
@@ -25,7 +24,10 @@ public class BrowserManagment {
                 driver.set(new ChromeDriver());
             }
         }
-        if (browser.equalsIgnoreCase("ff")) {
+
+        else if(browser == "FIREFOX") {
+            firefoxOptions = new FirefoxOptions();
+            firefoxOptions.addArguments("--headless");
             WebDriverManager.firefoxdriver().create();
             if (System.getProperty("os.name").toLowerCase().equals("linux")) {
                 driver.set(new FirefoxDriver(firefoxOptions));
@@ -33,7 +35,7 @@ public class BrowserManagment {
                 driver.set(new FirefoxDriver());
             }
         }
-        //driver.manage().window().max();
+
         return driver.get();
     }
 
