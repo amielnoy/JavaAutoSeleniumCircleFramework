@@ -1,6 +1,5 @@
 package Config;
 
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -33,5 +32,4 @@ import java.util.Properties;
      {
          return  prop.getProperty(Name);
      }
-
  }
