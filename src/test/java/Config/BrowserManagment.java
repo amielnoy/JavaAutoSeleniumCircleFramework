@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import java.util.Objects;
+
 public class BrowserManagment {
     static ThreadLocal<WebDriver> driver=new ThreadLocal<>();
 
@@ -14,22 +16,22 @@ public class BrowserManagment {
         ChromeOptions chromeOptions = null;
         FirefoxOptions firefoxOptions = null;
 
-        if(browser == "CHROME") {
+        if(Objects.equals(browser, "CHROME")) {
             chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--headless");
             WebDriverManager.chromedriver().setup();
-            if (System.getProperty("os.name").toLowerCase().equals("linux")) {
+            if (System.getProperty("os.name").equalsIgnoreCase("linux")) {
                 driver.set(new ChromeDriver(chromeOptions));
             } else {
                 driver.set(new ChromeDriver());
             }
         }
 
-        else if(browser == "FIREFOX") {
+        else if(Objects.equals(browser, "FIREFOX")) {
             firefoxOptions = new FirefoxOptions();
             firefoxOptions.addArguments("--headless");
             WebDriverManager.firefoxdriver().create();
-            if (System.getProperty("os.name").toLowerCase().equals("linux")) {
+            if (System.getProperty("os.name").equalsIgnoreCase("linux")) {
                 driver.set(new FirefoxDriver(firefoxOptions));
             } else {
                 driver.set(new FirefoxDriver());
