@@ -18,14 +18,6 @@ RUN apt-get update && apt-get install -y \
     fonts-liberation \
     && rm -rf /var/lib/apt/lists/*
 
-
-# Install Chrome
-#RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-#    && apt-get update \
-#    && apt-get install -y ./google-chrome-stable_current_amd64.deb \
-#    && rm google-chrome-stable_current_amd64.deb \
-#    && rm -rf /var/lib/apt/lists/*
-
 # Install ChromeDriver
 RUN CHROME_DRIVER_VERSION=$(wget -qO- https://chromedriver.storage.googleapis.com/LATEST_RELEASE) \
     && wget -q "https://chromedriver.storage.googleapis.com/${CHROME_DRIVER_VERSION}/chromedriver_linux64.zip" \
