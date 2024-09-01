@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
     fonts-liberation \
     && rm -rf /var/lib/apt/lists/*
 
+
 # Install Chrome
 #RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 #    && apt-get update \
