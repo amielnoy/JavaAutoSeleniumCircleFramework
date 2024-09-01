@@ -31,6 +31,13 @@ jobs:
       - store_artifacts:
           path: build/reports/tests
           destination: test-reports
+      - allure/install
+      - allure/report:
+          results_path: build/allure-results
+      - allure/upload:
+          results_path: build/allure-results
+          project_id: ${ALLURE_PROJECT_ID}
+          target_url: ${ALLURE_SERVER_URL}    
 
 workflows:
   version: 2
