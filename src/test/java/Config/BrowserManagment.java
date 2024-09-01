@@ -13,8 +13,8 @@ public class BrowserManagment {
     static ThreadLocal<WebDriver> driver=new ThreadLocal<>();
 
     public static WebDriver SetDriver(String browser) {
-        ChromeOptions chromeOptions = null;
-        FirefoxOptions firefoxOptions = null;
+        ChromeOptions chromeOptions ;
+        FirefoxOptions firefoxOptions ;
 
         if(Objects.equals(browser, "CHROME")) {
             chromeOptions = new ChromeOptions();
