@@ -15,7 +15,7 @@ import tests.BaseTest;
 public class TestGoogleResultsUsingSearch extends BaseTest {
     @Test
     @Description("does Selenium found in results")
-    public void SearchForSelenium() throws InterruptedException {
+    public void SearchForSelenium()  {
         GoogleMainPage GoogleMainPage= new  GoogleMainPage(getDriver());
         GoogleMainPage.enterText("Selenium");
         GoogleResultsPage GoogleResultsPage = GoogleMainPage.SubmitSearch();
