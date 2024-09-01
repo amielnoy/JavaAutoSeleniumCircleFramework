@@ -10,13 +10,21 @@ jobs:
     steps:
       - checkout
       - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
+      #- browser-tools/install-chromedriver
+      - run:
+          name: Install Gradle
+          command: |
+            wget https://services.gradle.org/distributions/gradle-7.4.2-bin.zip
+            sudo mkdir /opt/gradle
+            sudo unzip -d /opt/gradle gradle-7.4.2-bin.zip
+            export PATH=$PATH:/opt/gradle/gradle-7.4.2/bin
+            gradle --version
       - run:
           name: Install dependencies
-          command: ./gradlew dependencies
+          command: gradle dependencies
       - run:
           name: Run Selenium TestNG tests
-          command: ./gradlew test
+          command: gradle test
       - store_test_results:
           path: build/test-results/test
       - store_artifacts:
