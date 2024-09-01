@@ -16,7 +16,7 @@ import java.util.List;
 @Epic("Google regressions")
 @Feature("Search Testing")
 @Listeners(TestListener.class)
-public class GoogleTestDataDrriven extends BaseTest {
+public class GoogleDataDrivenTest extends BaseTest {
 
     @DataProvider(name = "SearchString")
     public Object[][] provideGoogleSearchData() {
