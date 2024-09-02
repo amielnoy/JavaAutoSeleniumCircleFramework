@@ -15,7 +15,7 @@ import java.util.NoSuchElementException;
 
 public class SeleniumSynchronization {
 
-    private static final long DEFAULT_TIMEOUT = 10;
+    private static final long DEFAULT_TIMEOUT = 20;
     private static final long DEFAULT_POLLING_INTERVAL = 500;
 
     public static void implicitWait(WebDriver driver, long timeoutInSeconds) {

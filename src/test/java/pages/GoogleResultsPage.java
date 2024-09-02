@@ -1,5 +1,6 @@
 package pages;
 
+import Utils.SeleniumSynchronization;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,7 +43,6 @@ public class GoogleResultsPage extends BasePage {
 
     @Step("Check that the term we searched is shown in the search results")
     public void CompareSearchResultTitle(String text){
-        Utils.SeleniumSynchronization.waitForElementListToBeOfSize(driver,getResultTitles(),7);
         Assert.assertTrue(getResultTitles().contains(text)," results not contain "+ text);
    }
 }
