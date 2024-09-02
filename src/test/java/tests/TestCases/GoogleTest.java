@@ -19,7 +19,7 @@ public class GoogleTest extends BaseTest {
 
     @Test
     @Description("does 123 found in results")
-    public void TestGoogleSearchFor123()  {
+    public void TestGoogleSearchFor()  {
         GoogleMainPage GoogleMainPage= new  GoogleMainPage(getDriver());
         GoogleMainPage.enterText("123");
         GoogleResultsPage GoogleResultsPage = GoogleMainPage.SubmitSearch();
