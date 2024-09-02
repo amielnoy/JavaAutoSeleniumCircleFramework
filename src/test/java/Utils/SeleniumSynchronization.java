@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 public class SeleniumSynchronization {
@@ -69,6 +70,12 @@ public class SeleniumSynchronization {
             WebElement element = driver1.findElement(locator);
             return element.isDisplayed() && element.isEnabled();
         });
+    }
+
+    // Custom condition
+    public static void waitForElementListToBeOfSize(WebDriver driver, List<String> list, int listCount) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT));
+        wait.until(driver1 -> list.size() == listCount);
     }
 
     public static void waitForElementText(WebDriver driver,WebElement webElement,String expectedText)
