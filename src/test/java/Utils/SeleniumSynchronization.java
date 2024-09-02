@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -61,12 +62,18 @@ public class SeleniumSynchronization {
         }
     }
 
-    // Custom condition example
+    // Custom condition
     public static boolean waitForCustomCondition(WebDriver driver, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT));
         return wait.until(driver1 -> {
             WebElement element = driver1.findElement(locator);
             return element.isDisplayed() && element.isEnabled();
         });
+    }
+
+    public static void waitForElementText(WebDriver driver,WebElement webElement,String expectedText)
+    {
+        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        wait.until(d -> webElement.getText().equalsIgnoreCase(expectedText));
     }
 }
