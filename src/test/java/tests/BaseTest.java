@@ -4,8 +4,13 @@ import Config.BrowserManagment;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class BaseTest {
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    private static final Logger logger = LogManager.getLogger();
 
     @Parameters({"browser", "env"})
     @BeforeMethod
@@ -15,6 +20,7 @@ public class BaseTest {
 
         String siteUrl = Config.ConfigurationManager.GetInstance(env).GetProperty("url");
         getDriver().get(siteUrl);
+        logger.info("*****Starting Selenium test*****");
         return webDriver;
     }
 
@@ -29,5 +35,6 @@ public class BaseTest {
             webDriver.quit();
             driver.remove();
         }
+        logger.info("*****Selenium test ENDED*****");
     }
 }
