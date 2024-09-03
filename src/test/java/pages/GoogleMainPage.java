@@ -11,7 +11,6 @@ import java.time.Duration;
 import java.util.List;
 
 import static java.lang.Thread.sleep;
-import static sun.security.util.KnownOIDs.EC;
 
 public class GoogleMainPage extends BasePage {
 

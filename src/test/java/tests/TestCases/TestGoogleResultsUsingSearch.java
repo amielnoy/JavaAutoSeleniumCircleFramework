@@ -22,7 +22,7 @@ public class TestGoogleResultsUsingSearch extends BaseTest {
         GoogleMainPage GoogleMainPage= new  GoogleMainPage(getDriver());
         GoogleMainPage.enterText("Selenium");
         GoogleResultsPage GoogleResultsPage = GoogleMainPage.SubmitSearch();
-        for(int i=0;i <5;i++) {
+        for(int i=0;i <3;i++) {
             try {
                 List<String> titelsList = GoogleResultsPage.getResultTitles();
                 SeleniumSynchronization.waitForElementListToBeOfSize(getDriver(), titelsList, 10);

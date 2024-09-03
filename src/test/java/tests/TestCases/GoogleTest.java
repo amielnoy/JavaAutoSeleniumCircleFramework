@@ -23,15 +23,10 @@ public class GoogleTest extends BaseTest {
         GoogleMainPage GoogleMainPage= new  GoogleMainPage(getDriver());
         GoogleMainPage.enterText("123");
         GoogleResultsPage GoogleResultsPage = GoogleMainPage.SubmitSearch();
-        for(int i=0;i <5;i++) {
-            try {
-                List<String> titelsList = GoogleResultsPage.getResultTitles();
-                SeleniumSynchronization.waitForElementListToBeOfSize(getDriver(), titelsList, 7);
-                return;
-            }catch (Exception e){
-                System.out.println("still waiting for number of titles to be="+7);
-            }
-        }
+
+        List<String> titelsList = GoogleResultsPage.getResultTitles();
+        SeleniumSynchronization.waitForElementListToBeOfSize(getDriver(), titelsList, 7);
+        getLogger().info("still waiting for number of titles to be="+7);
         GoogleResultsPage.CompareSearchResultTitle("תוספי תזונה");
     }
 }

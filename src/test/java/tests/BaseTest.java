@@ -20,12 +20,16 @@ public class BaseTest {
 
         String siteUrl = Config.ConfigurationManager.GetInstance(env).GetProperty("url");
         getDriver().get(siteUrl);
-        logger.info("*****Starting Selenium test*****");
+        getLogger().info("*****Starting Selenium test*****");
         return webDriver;
     }
 
     protected WebDriver getDriver() {
         return driver.get();
+    }
+
+    protected Logger getLogger(){
+        return BaseTest.logger;
     }
 
     @AfterMethod
@@ -35,6 +39,6 @@ public class BaseTest {
             webDriver.quit();
             driver.remove();
         }
-        logger.info("*****Selenium test ENDED*****");
+        getLogger().info("*****Selenium test ENDED*****");
     }
 }
