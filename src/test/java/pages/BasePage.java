@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+import static Config.GlobalConstants.MAX_TIMEOUT;
+
 public class BasePage {
 
     protected WebDriver driver;
@@ -15,7 +17,7 @@ public class BasePage {
     public BasePage(WebDriver driver)
     {
         this.driver=driver;
-        this.wait=new WebDriverWait(driver,Duration.ofSeconds(30));
+        this.wait=new WebDriverWait(driver,Duration.ofSeconds(MAX_TIMEOUT));
         PageFactory.initElements(driver, this);
     }
 
