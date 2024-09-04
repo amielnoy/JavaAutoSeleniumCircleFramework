@@ -4,6 +4,8 @@ import Utils.SeleniumSynchronization;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.GoogleMainPage;
@@ -16,6 +18,8 @@ import java.util.List;
 @Feature("Search Testing")
 @Listeners(TestListener.class)
 public class TestGoogleResultsUsingSearch extends BaseTest {
+    protected static final Logger logger = LogManager.getLogger(TestGoogleResultsUsingSearch.class);
+
     @Test
     @Description("does Selenium found in results")
     public void SearchForSelenium()  {
