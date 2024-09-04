@@ -3,11 +3,14 @@
  *
  * This project uses @Incubating APIs which are subject to change.
  */
-
 plugins {
     id 'java-library'
     id 'maven-publish'
     id 'io.qameta.allure' version '2.11.2'
+}
+
+allure {
+    version = "2.13.1"
 }
 
 java {
@@ -21,6 +24,11 @@ repositories {
         url = uri('https://repo.maven.apache.org/maven2/')
     }
 }
+
+// Define the version of AspectJ
+def aspectJVersion = "1.9.20.1"
+// Define the version of Allure you want to use via the allureVersion property
+def allureVersion = "2.29.0"
 
 dependencies {
     // Selenium WebDriver
@@ -37,13 +45,22 @@ dependencies {
     // https://mvnrepository.com/artifact/com.opencsv/opencsv
     implementation 'com.opencsv:opencsv:3.7'
     // https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
-    implementation 'io.qameta.allure:allure-testng:2.29.0'
-    testImplementation 'io.qameta.allure:allure-testng:2.29.0'
+    // Import allure-bom to ensure correct versions of all the dependencies are used
+    testImplementation platform("io.qameta.allure:allure-bom:$allureVersion")
+
+    // Add necessary Allure dependencies to dependencies section
+    testImplementation "io.qameta.allure:allure-testng:$allureVersion"
+    implementation "io.qameta.allure:allure-testng:$allureVersion"
+    testImplementation "io.qameta.allure:allure-testng:$allureVersion"
+
     implementation 'org.apache.logging.log4j:log4j-api:2.23.1'
     testImplementation 'org.apache.logging.log4j:log4j-api:2.23.1'
-
+    // Log4j2 Core
     implementation 'org.apache.logging.log4j:log4j-core:2.23.1'
-    testImplementation 'org.apache.logging.log4j:log4j-api:2.23.1'
+    testImplementation 'org.apache.logging.log4j:log4j-core:2.23.1'
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+    testImplementation "org.aspectj:aspectjweaver:$aspectJVersion"
+    implementation "org.aspectj:aspectjweaver:$aspectJVersion"
 }
 
 group = 'org.example'
@@ -69,4 +86,16 @@ tasks.withType(Javadoc) {
 
 tasks.named('test') {
     useTestNG()
+}
+
+test {
+    useTestNG() {
+        useDefaultListeners = true
+        //suites 'src/test/resources/all-tests.xml'
+    }
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+        exceptionFormat 'full'
+    }
+    systemProperty "allure.results.directory", "build/allure-results"
 }
