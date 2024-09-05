@@ -56,7 +56,6 @@ public class TestSortAlphabeticallyDecendingAndIpodStorage extends BaseTest {
                 itemName = resultsList.get(listIndex).split("\n")[0];
                 resultsNamesList.add(itemName);
             }
-
             Assert.assertTrue(isIpodNamesSorted(resultsNamesList), "****Error: The list is not sorted in Acending order!!****");
         }
     }

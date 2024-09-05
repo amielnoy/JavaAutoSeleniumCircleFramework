@@ -10,19 +10,16 @@ import org.apache.logging.log4j.Logger;
 
 public class BaseTest {
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    //protected static final Logger logger = LogManager.getLogger(BaseTest.class);
+    protected static final Logger logger = LogManager.getLogger(BaseTest.class);
 
     @Parameters({"browser", "env"})
     @BeforeMethod
     public WebDriver setupEnvironmentAndBrowser(@Optional("chrome") String browser, @Optional("test") String env) {
-        //logger.info("Starting to initialize browser");
+        logger.info("Starting to initialize browser");
         WebDriver webDriver = BrowserManagment.SetDriver("CHROME");
         driver.set(webDriver);
-        //logger.info("Finished initializing browser");
-
-        //String siteBaseUrl = Config.ConfigurationManager.GetInstance(env).GetProperty("url");
-        //getDriver().get(siteBaseUrl);
-        //logger.info("*****Starting Selenium test*****");
+        logger.info("Finished initializing browser");
+        logger.info("*****STARTING Selenium test*****");
         return webDriver;
     }
 
@@ -38,6 +35,6 @@ public class BaseTest {
             webDriver.quit();
             driver.remove();
         }
-        //logger.info("*****Selenium test ENDED*****");
+        logger.info("*****Selenium test ENDED*****");
     }
 }
