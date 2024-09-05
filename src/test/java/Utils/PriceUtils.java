@@ -11,7 +11,9 @@ public class PriceUtils {
     public static class PriceComparator implements Comparator<IpodItem> {
         @Override
         public int compare(IpodItem item1, IpodItem item2) {
-            return Double.compare(Double.parseDouble(item1.getPrice()), Double.parseDouble(item2.getPrice()));
+            String itemPrice1 = item1.getPrice().replace("$", "");
+            String itemPrice2 = item2.getPrice().replace("$", "");
+            return Double.compare(Double.parseDouble(itemPrice1), Double.parseDouble(itemPrice2));
         }
     }
 
@@ -21,14 +23,13 @@ public class PriceUtils {
         }
 
         // Sort the items by price using the PriceComparator
-        Collections.sort(ipodItems, new PriceComparator());
+        ipodItems.sort(new PriceComparator());
 
         // After sorting, the minimum price will be the first element,
         // and the maximum price will be the last element in the sorted list.
-        double minPrice = Double.parseDouble(ipodItems.get(0).getPrice());
-        double maxPrice = Double.parseDouble(ipodItems.get(ipodItems.size() - 1).getPrice());
+        double minPrice = Double.parseDouble(ipodItems.get(0).getPrice().replace("$", ""));
+        double maxPrice = Double.parseDouble(ipodItems.get(ipodItems.size() - 1).getPrice().replace("$", ""));
 
         return new double[]{minPrice, maxPrice}; // Return min and max prices
-    }
-}
+    }}
 
