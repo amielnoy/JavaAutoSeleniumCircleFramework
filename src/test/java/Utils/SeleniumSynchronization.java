@@ -22,6 +22,14 @@ public class SeleniumSynchronization {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeoutInSeconds));
     }
 
+    public static void waitTillInputWasSetWithText(WebDriver driver,WebElement inputWebElement,String expectedText){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.and(
+                ExpectedConditions.elementToBeClickable(inputWebElement),
+                ExpectedConditions.attributeContains(inputWebElement, "value", expectedText)
+        ));
+    }
+
     public static WebElement waitForElementVisible(WebDriver driver, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
